@@ -10,7 +10,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        Button(action: {}) {
+            HStack {
+                Image("flex_arm")
+                    .resizable()
+                    .renderingMode(.original)
+                    .frame(width: 35, height: 35, alignment: .center)
+                Text("Get Fit")
+                    .foregroundColor(Color.white)
+                    .font(Font.custom("Rubik-Medium", size: 30))
+            }
+            .padding()
+            .background(Color(hex: 0x3F44B5))
+            .cornerRadius(10)
+        }
     }
 }
 
