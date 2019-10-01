@@ -14,6 +14,7 @@
 		AFAB86DF2342C71600FA8B6C /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFAB86DB2342C70E00FA8B6C /* Rubik-Light.ttf */; };
 		AFAB86E02342C71600FA8B6C /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFAB86DA2342C70E00FA8B6C /* Rubik-Medium.ttf */; };
 		AFAB86E12342C71600FA8B6C /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFAB86DC2342C70E00FA8B6C /* Rubik-Regular.ttf */; };
+		AFAB86E4234418F600FA8B6C /* WorkoutPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB86E3234418F600FA8B6C /* WorkoutPlayer.swift */; };
 		AFEB64E42336BEE3008B32AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB64E32336BEE3008B32AA /* AppDelegate.swift */; };
 		AFEB64E62336BEE3008B32AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB64E52336BEE3008B32AA /* SceneDelegate.swift */; };
 		AFEB64E82336BEE3008B32AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB64E72336BEE3008B32AA /* ContentView.swift */; };
@@ -30,6 +31,7 @@
 		AFAB86DA2342C70E00FA8B6C /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		AFAB86DB2342C70E00FA8B6C /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
 		AFAB86DC2342C70E00FA8B6C /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		AFAB86E3234418F600FA8B6C /* WorkoutPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlayer.swift; sourceTree = "<group>"; };
 		AFEB64E02336BEE3008B32AA /* GymJamOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymJamOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEB64E32336BEE3008B32AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFEB64E52336BEE3008B32AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				AFEB64E32336BEE3008B32AA /* AppDelegate.swift */,
 				AFEB64E52336BEE3008B32AA /* SceneDelegate.swift */,
 				AFEB64E72336BEE3008B32AA /* ContentView.swift */,
+				AFAB86E3234418F600FA8B6C /* WorkoutPlayer.swift */,
 				AFAB86D62342C4FA00FA8B6C /* ColorExtension.swift */,
 				AFEB64E92336BEE4008B32AA /* Assets.xcassets */,
 				AFEB64EE2336BEE4008B32AA /* LaunchScreen.storyboard */,
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFEB64E42336BEE3008B32AA /* AppDelegate.swift in Sources */,
+				AFAB86E4234418F600FA8B6C /* WorkoutPlayer.swift in Sources */,
 				AFEB64E62336BEE3008B32AA /* SceneDelegate.swift in Sources */,
 				AFEB64E82336BEE3008B32AA /* ContentView.swift in Sources */,
 				AFAB86D72342C4FA00FA8B6C /* ColorExtension.swift in Sources */,

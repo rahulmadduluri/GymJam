@@ -9,8 +9,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isModal: Bool = false
+    
     var body: some View {
-        Button(action: {}) {
+        Button(action: {
+            self.isModal = true
+        }) {
             HStack {
                 Image("flex_arm")
                     .resizable()
@@ -23,7 +27,9 @@ struct ContentView: View {
             .padding()
             .background(Color(hex: 0x3F44B5))
             .cornerRadius(10)
-        }
+        }.sheet(isPresented: $isModal, content: {
+            WorkoutPlayer()
+        })
     }
 }
 
