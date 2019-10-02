@@ -7,40 +7,17 @@
 //
 
 import SwiftUI
-import AVKit
 
-struct WorkoutPlayer: UIViewRepresentable {
-  func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<WorkoutPlayer>) {
-  }
-  func makeUIView(context: Context) -> UIView {
-    return WorkoutPlayerUIView(frame: .zero)
-  }
-}
-
-class WorkoutPlayerUIView: UIView {
-  private let playerLayer = AVPlayerLayer()
-  override init(frame: CGRect) {
-    super.init(frame: frame)
-    
-    guard let path = Bundle.main.path(forResource: "hiit_example_sample", ofType:"mp4") else {
-        debugPrint("hiit_example_sample.mp4 not found")
-        return
+struct WorkoutPlayer: View {
+        
+    var body: some View {
+        HStack {
+            WorkoutInstructorView()
+            WorkoutCameraView()
+            WorkoutStatsView()
+        }
     }
-    let player = AVPlayer(url: URL(fileURLWithPath: path))
-    player.play()
-    
-    playerLayer.player = player
-    layer.addSublayer(playerLayer)
-  }
-  required init?(coder: NSCoder) {
-   fatalError("init(coder:) has not been implemented")
-  }
-  override func layoutSubviews() {
-    super.layoutSubviews()
-    playerLayer.frame = bounds
-  }
 }
-
 
 struct WorkoutPlayer_Previews: PreviewProvider {
     static var previews: some View {

@@ -28,7 +28,10 @@ struct ContentView: View {
             .background(Color(hex: 0x3F44B5))
             .cornerRadius(10)
         }.sheet(isPresented: $isModal, content: {
-            WorkoutPlayer()
+            WorkoutPlayer().onAppear() {
+                let value = UIInterfaceOrientation.landscapeRight.rawValue
+                UIDevice.current.setValue(value, forKey: "orientation")
+            }
         })
     }
 }

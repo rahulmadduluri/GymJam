@@ -15,6 +15,9 @@
 		AFAB86E02342C71600FA8B6C /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFAB86DA2342C70E00FA8B6C /* Rubik-Medium.ttf */; };
 		AFAB86E12342C71600FA8B6C /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFAB86DC2342C70E00FA8B6C /* Rubik-Regular.ttf */; };
 		AFAB86E4234418F600FA8B6C /* WorkoutPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB86E3234418F600FA8B6C /* WorkoutPlayer.swift */; };
+		AFAB86E6234427F100FA8B6C /* WorkoutInstructorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB86E5234427F100FA8B6C /* WorkoutInstructorView.swift */; };
+		AFAB86EA2344290100FA8B6C /* WorkoutCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB86E92344290100FA8B6C /* WorkoutCameraView.swift */; };
+		AFAB86EC23442AAD00FA8B6C /* WorkoutStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB86EB23442AAD00FA8B6C /* WorkoutStatsView.swift */; };
 		AFEB64E42336BEE3008B32AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB64E32336BEE3008B32AA /* AppDelegate.swift */; };
 		AFEB64E62336BEE3008B32AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB64E52336BEE3008B32AA /* SceneDelegate.swift */; };
 		AFEB64E82336BEE3008B32AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB64E72336BEE3008B32AA /* ContentView.swift */; };
@@ -32,6 +35,9 @@
 		AFAB86DB2342C70E00FA8B6C /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
 		AFAB86DC2342C70E00FA8B6C /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		AFAB86E3234418F600FA8B6C /* WorkoutPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlayer.swift; sourceTree = "<group>"; };
+		AFAB86E5234427F100FA8B6C /* WorkoutInstructorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutInstructorView.swift; sourceTree = "<group>"; };
+		AFAB86E92344290100FA8B6C /* WorkoutCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCameraView.swift; sourceTree = "<group>"; };
+		AFAB86EB23442AAD00FA8B6C /* WorkoutStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStatsView.swift; sourceTree = "<group>"; };
 		AFEB64E02336BEE3008B32AA /* GymJamOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymJamOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEB64E32336BEE3008B32AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFEB64E52336BEE3008B32AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,9 @@
 				AFEB64E52336BEE3008B32AA /* SceneDelegate.swift */,
 				AFEB64E72336BEE3008B32AA /* ContentView.swift */,
 				AFAB86E3234418F600FA8B6C /* WorkoutPlayer.swift */,
+				AFAB86E5234427F100FA8B6C /* WorkoutInstructorView.swift */,
+				AFAB86E92344290100FA8B6C /* WorkoutCameraView.swift */,
+				AFAB86EB23442AAD00FA8B6C /* WorkoutStatsView.swift */,
 				AFAB86D62342C4FA00FA8B6C /* ColorExtension.swift */,
 				AFEB64E92336BEE4008B32AA /* Assets.xcassets */,
 				AFEB64EE2336BEE4008B32AA /* LaunchScreen.storyboard */,
@@ -184,10 +193,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFAB86EA2344290100FA8B6C /* WorkoutCameraView.swift in Sources */,
 				AFEB64E42336BEE3008B32AA /* AppDelegate.swift in Sources */,
 				AFAB86E4234418F600FA8B6C /* WorkoutPlayer.swift in Sources */,
 				AFEB64E62336BEE3008B32AA /* SceneDelegate.swift in Sources */,
+				AFAB86E6234427F100FA8B6C /* WorkoutInstructorView.swift in Sources */,
 				AFEB64E82336BEE3008B32AA /* ContentView.swift in Sources */,
+				AFAB86EC23442AAD00FA8B6C /* WorkoutStatsView.swift in Sources */,
 				AFAB86D72342C4FA00FA8B6C /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
