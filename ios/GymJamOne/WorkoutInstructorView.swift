@@ -32,21 +32,8 @@ class WorkoutInstructorUIView: UIView {
         
         player.play()
     }
-//
-//  override init(frame: CGRect) {
-//    super.init(frame: frame)
-//
-//    guard let path = Bundle.main.path(forResource: "hiit_example_sample", ofType:"mp4") else {
-//        debugPrint("hiit_example_sample.mp4 not found")
-//        return
-//    }
-//    let player = AVPlayer(url: URL(fileURLWithPath: path))
-//    player.play()
-//
-//    playerLayer.player = player
-//    layer.addSublayer(playerLayer)
-//  }
-  required init?(coder: NSCoder) {
+
+    required init?(coder: NSCoder) {
    fatalError("init(coder:) has not been implemented")
   }
     

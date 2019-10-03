@@ -29,8 +29,10 @@ struct ContentView: View {
             .cornerRadius(10)
         }.sheet(isPresented: $isModal, content: {
             WorkoutPlayer().onAppear() {
-                let value = UIInterfaceOrientation.landscapeRight.rawValue
-                UIDevice.current.setValue(value, forKey: "orientation")
+                AppUtility.lockOrientation(.landscape, andRotateTo: .landscapeRight)
+            }
+            .onDisappear() {
+                AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
             }
         })
     }

@@ -24,7 +24,7 @@ struct WorkoutPlayer: View {
                 .onDisappear() {
                     self.player.pause()
                 }
-            WorkoutCameraView()
+            PhotoCaptureView()
             WorkoutStatsView()
         }
     }

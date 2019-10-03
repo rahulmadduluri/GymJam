@@ -14,7 +14,6 @@ struct WorkoutCameraView: UIViewRepresentable {
   func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<WorkoutCameraView>) {
   }
   func makeUIView(context: Context) -> UIView {
-    // create PlayerUIView
     return WorkoutCameraUIView(frame: .zero)
   }
 }
@@ -29,7 +28,6 @@ class WorkoutCameraUIView: UIView {
   }
     
   override func layoutSubviews() {
-    backgroundColor = UIColor.blue
     super.layoutSubviews()
   }
 }
