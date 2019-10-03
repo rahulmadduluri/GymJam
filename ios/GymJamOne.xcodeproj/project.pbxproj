@@ -75,6 +75,19 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		AFAB86F1234590CD00FA8B6C /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				AFAB86E3234418F600FA8B6C /* WorkoutPlayer.swift */,
+				AFAB86E5234427F100FA8B6C /* WorkoutInstructorView.swift */,
+				AFAB86E92344290100FA8B6C /* WorkoutCameraView.swift */,
+				AFAB86ED2345836E00FA8B6C /* ImagePicker.swift */,
+				AFAB86EF2345876F00FA8B6C /* PhotoCaptureView.swift */,
+				AFAB86EB23442AAD00FA8B6C /* WorkoutStatsView.swift */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
 		AFEB64D72336BEE3008B32AA = {
 			isa = PBXGroup;
 			children = (
@@ -98,12 +111,7 @@
 				AFEB64E32336BEE3008B32AA /* AppDelegate.swift */,
 				AFEB64E52336BEE3008B32AA /* SceneDelegate.swift */,
 				AFEB64E72336BEE3008B32AA /* ContentView.swift */,
-				AFAB86E3234418F600FA8B6C /* WorkoutPlayer.swift */,
-				AFAB86E5234427F100FA8B6C /* WorkoutInstructorView.swift */,
-				AFAB86E92344290100FA8B6C /* WorkoutCameraView.swift */,
-				AFAB86ED2345836E00FA8B6C /* ImagePicker.swift */,
-				AFAB86EF2345876F00FA8B6C /* PhotoCaptureView.swift */,
-				AFAB86EB23442AAD00FA8B6C /* WorkoutStatsView.swift */,
+				AFAB86F1234590CD00FA8B6C /* Workout */,
 				AFAB86D62342C4FA00FA8B6C /* ColorExtension.swift */,
 				AFEB64E92336BEE4008B32AA /* Assets.xcassets */,
 				AFEB64EE2336BEE4008B32AA /* LaunchScreen.storyboard */,

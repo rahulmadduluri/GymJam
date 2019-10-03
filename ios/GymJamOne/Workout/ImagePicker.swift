@@ -20,7 +20,7 @@ class ImagePickerCoordinator: NSObject, UINavigationControllerDelegate, UIImageP
 }
 
 struct ImagePicker: UIViewControllerRepresentable {
-        
+            
     func makeCoordinator() -> ImagePickerCoordinator {
         return ImagePickerCoordinator()
     }
@@ -28,6 +28,7 @@ struct ImagePicker: UIViewControllerRepresentable {
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
         let picker = UIImagePickerController()
         picker.delegate = context.coordinator
+//        picker.sourceType = .camera
         return picker
     }
     

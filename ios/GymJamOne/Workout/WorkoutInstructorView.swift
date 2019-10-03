@@ -27,6 +27,15 @@ class WorkoutInstructorUIView: UIView {
     init(player: AVPlayer) {
         super.init(frame: .zero)
         
+        // play audio out loud
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
+        }
+        catch {
+            print("Setting category to AVAudioSessionCategoryPlayback failed.")
+        }
+
+        // add to layer
         playerLayer.player = player
         layer.addSublayer(playerLayer)
         
