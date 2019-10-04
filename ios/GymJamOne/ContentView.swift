@@ -29,7 +29,7 @@ struct ContentView: View {
             .cornerRadius(10)
         }.sheet(isPresented: $isModal, content: {
             WorkoutPlayer().onAppear() {
-                AppUtility.lockOrientation(.landscape, andRotateTo: .landscapeRight)
+                AppUtility.lockOrientation(.landscapeRight, andRotateTo: .landscapeRight)
             }
             .onDisappear() {
                 AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
