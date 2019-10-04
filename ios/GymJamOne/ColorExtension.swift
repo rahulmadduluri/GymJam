@@ -23,4 +23,8 @@ extension Color {
             opacity: alpha
         )
     }
+    
+    public static func primaryColor() -> Color {
+        return Color(hex: 0x3F44B5)
+    }
 }
