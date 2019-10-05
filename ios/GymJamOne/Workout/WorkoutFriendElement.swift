@@ -16,12 +16,12 @@ struct WorkoutFriendUIElement: Hashable, Codable {
 
 struct WorkoutFriendElement: View {
     
-    let workoutFriendElements = [WorkoutFriendUIElement(imageName: "hammad", userName: "hammadtime"), WorkoutFriendUIElement(imageName: "praful", userName: "praful"), WorkoutFriendUIElement(imageName: "reia", userName: "rcho99"), WorkoutFriendUIElement(imageName: "invite", userName: "Invite")]
+    let workoutFriendElements = [WorkoutFriendUIElement(imageName: "hammad", userName: "hammadtime"), WorkoutFriendUIElement(imageName: "praful", userName: "praful"), WorkoutFriendUIElement(imageName: "reia", userName: "rcho99"), WorkoutFriendUIElement(imageName: "invite", userName: " ")]
     
     var body: some View {
-        VStack {
-            Text("Who's Joining?")
-                .font(Font.custom("Rubik-Medium", size: 18))
+        VStack(alignment: .leading) {
+            Text("Who's Doing This Workout")
+                .font(Font.custom("Rubik-Medium", size: 16))
             Spacer()
             Spacer()
             HStack {

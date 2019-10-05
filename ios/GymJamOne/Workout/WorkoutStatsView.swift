@@ -11,13 +11,32 @@ import SwiftUI
 struct WorkoutStatsView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 30) {
-            Text("Tuesday Jam")
+            Text("Blistering Twisters")
                 .font(Font.custom("Rubik-Medium", size: 24))
             HStack(alignment: .center, spacing: 40) {
-                Text("Friend").frame(minWidth: 50, maxWidth: 50)
-                Text("Reps").frame(minWidth: 50, maxWidth: 50)
+                VStack {
+                    HStack(spacing: -5) {
+                        Image("fitness_emoji_male")
+                            .resizable()
+                            .frame(width: 35, height: 35)
+                        Image("fitness_emoji_female")
+                            .resizable()
+                            .frame(width: 35, height: 35)
+                    }
+                    Text("Friend")
+                        .frame(minWidth: 50, maxWidth: 50)
+                        .font(Font.custom("Rubik-Regular", size: 16))
+                }
+                VStack {
+                    Image("reps")
+                        .resizable()
+                        .frame(width: 35, height: 35)
+                    Text("Reps")
+                        .frame(minWidth: 50, maxWidth: 50)
+                        .font(Font.custom("Rubik-Regular", size: 16))
+                }
             }
-        }.frame(minWidth: 300, maxWidth: 300, minHeight: 0, maxHeight: .infinity, alignment: .top)
+        }.frame(minWidth: 300, maxWidth: 300, minHeight: 0, maxHeight: .infinity, alignment: .top).padding()
     }
 }
 

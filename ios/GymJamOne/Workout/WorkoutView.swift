@@ -24,16 +24,16 @@ struct WorkoutView: View {
                         .frame(width: 125, height: 200)
                         .cornerRadius(10)
                         .shadow(radius: 5)
-                    VStack(alignment: .leading, spacing: 20) {
+                    VStack(alignment: .leading, spacing: 10) {
                         Text("Blistering Twisters")
-                            .font(Font.custom("Rubik-Medium", size: 18))
+                            .font(Font.custom("Rubik-Medium", size: 16))
                         Text("Squats, Twists, Jumping Jacks")
                             .font(Font.custom("Rubik-Regular", size: 14))
                         Text("30 minutes")
                             .font(Font.custom("Rubik-Regular", size: 14))
                         Text("148 calories")
                             .font(Font.custom("Rubik-Regular", size: 14))
-                    }
+                    }.padding()
                 }
                 WorkoutFriendElement()
             }
