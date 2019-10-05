@@ -1,6 +1,6 @@
 For Local Development:
 
-firt install MYSQL
+first install MYSQL
 brew install mysql
 
 To add app environment

@@ -2,20 +2,23 @@ package main
 
 import (
 	"log"
-	"net/http"
+	// "net/http"
 	"os"
 
-	auth "github.com/rahulmadduluri/gymjam/backend/app/auth"
-	db "github.com/rahulmadduluri/gymjam/backend/app/db"
-	server "github.com/rahulmadduluri/gymjam/backend/app/server"
+	auth "github.com/rahulmadduluri/GymJam/backend/app/auth"
+	db "github.com/rahulmadduluri/GymJam/backend/app/db"
+	server "github.com/rahulmadduluri/GymJam/backend/app/server"
 
 	"github.com/99designs/gqlgen/handler"
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/service/s3"
-	"github.com/aws/aws-sdk-go/service/s3/s3manager"
+	// "github.com/aws/aws-sdk-go/aws"
+	// "github.com/aws/aws-sdk-go/service/s3"
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
 	"github.com/urfave/negroni"
+)
+
+const (
+	_PortKey = "PORT"
 )
 
 func main() {
@@ -57,7 +60,7 @@ func main() {
 		negroni.HandlerFunc(auth.AddJWTToContext),
 		negroni.Wrap(api),
 	))
-	r.PathPrefix("/s3/").Handler(negroni.New(negroni.Wrap(s3router)))
+	// r.PathPrefix("/s3/").Handler(negroni.New(negroni.Wrap(s3router)))
 
 	// add web router for prod environment
 	// if auth.IsEnvProd() == true {
@@ -80,23 +83,23 @@ func main() {
 	n.Run(":" + port)
 }
 
-func serveFromS3(w http.ResponseWriter, req *http.Request) {
-	downloader := s3manager.NewDownloader(auth.AWSSession())
+// func serveFromS3(w http.ResponseWriter, req *http.Request) {
+// 	downloader := s3manager.NewDownloader(auth.AWSSession())
 
-	buff := &aws.WriteAtBuffer{}
-	bucket := auth.AWSBucket()
+// 	buff := &aws.WriteAtBuffer{}
+// 	bucket := auth.AWSBucket()
 
-	_, err := downloader.Download(buff,
-		&s3.GetObjectInput{
-			Bucket: aws.String(bucket),
-			Key:    aws.String(req.URL.Path),
-		},
-	)
-	if err != nil {
-		log.Println("Failed to download image")
-	}
+// 	_, err := downloader.Download(buff,
+// 		&s3.GetObjectInput{
+// 			Bucket: aws.String(bucket),
+// 			Key:    aws.String(req.URL.Path),
+// 		},
+// 	)
+// 	if err != nil {
+// 		log.Println("Failed to download image")
+// 	}
 
-	if _, err = w.Write(buff.Bytes()); err != nil {
-		log.Println("unable to write image.")
-	}
-}
+// 	if _, err = w.Write(buff.Bytes()); err != nil {
+// 		log.Println("unable to write image.")
+// 	}
+// }
