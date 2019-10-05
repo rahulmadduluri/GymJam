@@ -27,4 +27,8 @@ extension Color {
     public static func primaryColor() -> Color {
         return Color(hex: 0x3F44B5)
     }
+    
+    public static func linkableColor() -> Color {
+        return Color(hex: 0x2F80ED)
+    }
 }
