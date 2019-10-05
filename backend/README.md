@@ -11,7 +11,7 @@ mysql -u {user} -p {password}
 use gymjam;
 
 To populate MySQL:
-source {path to GymJamOne}/GymJamOne/backend/db-util/create_db.sql
+source {path to GymJam}/GymJam/backend/db-util/create_db.sql
 
 To Run Server: 
 go run app/main/main.go
