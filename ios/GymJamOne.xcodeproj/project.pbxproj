@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF5701BB2342A6F400542D55 /* hiit_example_sample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AF5701BA2342A6F400542D55 /* hiit_example_sample.mp4 */; };
+		AF967E062348635D0002E1CB /* WorkoutFriendElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF967E052348635D0002E1CB /* WorkoutFriendElement.swift */; };
 		AFAB86D72342C4FA00FA8B6C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB86D62342C4FA00FA8B6C /* ColorExtension.swift */; };
 		AFAB86DD2342C71600FA8B6C /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFAB86D82342C70E00FA8B6C /* Rubik-Black.ttf */; };
 		AFAB86DE2342C71600FA8B6C /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFAB86D92342C70E00FA8B6C /* Rubik-Bold.ttf */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		AF5701BA2342A6F400542D55 /* hiit_example_sample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hiit_example_sample.mp4; sourceTree = "<group>"; };
+		AF967E052348635D0002E1CB /* WorkoutFriendElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutFriendElement.swift; sourceTree = "<group>"; };
 		AFAB86D62342C4FA00FA8B6C /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		AFAB86D82342C70E00FA8B6C /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
 		AFAB86D92342C70E00FA8B6C /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				AFAB86F22346D12E00FA8B6C /* WorkoutView.swift */,
+				AF967E052348635D0002E1CB /* WorkoutFriendElement.swift */,
 				AFAB86E3234418F600FA8B6C /* WorkoutPlayer.swift */,
 				AFAB86E5234427F100FA8B6C /* WorkoutInstructorView.swift */,
 				AFAB86E92344290100FA8B6C /* WorkoutCameraView.swift */,
@@ -220,6 +223,7 @@
 				AFAB86E6234427F100FA8B6C /* WorkoutInstructorView.swift in Sources */,
 				AFEB64E82336BEE3008B32AA /* ContentView.swift in Sources */,
 				AFAB86EC23442AAD00FA8B6C /* WorkoutStatsView.swift in Sources */,
+				AF967E062348635D0002E1CB /* WorkoutFriendElement.swift in Sources */,
 				AFAB86D72342C4FA00FA8B6C /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

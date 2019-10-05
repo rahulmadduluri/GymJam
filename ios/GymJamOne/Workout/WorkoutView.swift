@@ -11,7 +11,7 @@ import SwiftUI
 struct WorkoutView: View {
     
     @State var isModal: Bool = false
-    
+        
     var body: some View {
         VStack(spacing: 50) {
             VStack(alignment: .leading, spacing: 50) {
@@ -27,61 +27,15 @@ struct WorkoutView: View {
                     VStack(alignment: .leading, spacing: 20) {
                         Text("Blistering Twisters")
                             .font(Font.custom("Rubik-Medium", size: 18))
-                        Spacer()
                         Text("Squats, Twists, Jumping Jacks")
                             .font(Font.custom("Rubik-Regular", size: 14))
-                        Spacer()
                         Text("30 minutes")
                             .font(Font.custom("Rubik-Regular", size: 14))
-                        Spacer()
                         Text("148 calories")
                             .font(Font.custom("Rubik-Regular", size: 14))
                     }
                 }
-                VStack {
-                    Text("Friends doing this workout")
-                        .font(Font.custom("Rubik-Medium", size: 18))
-                    Spacer()
-                    Spacer()
-                    HStack {
-                        VStack {
-                            Image("hammad")
-                                .resizable()
-                                .frame(width: 75, height: 75)
-                                .cornerRadius(5)
-                            Text("hammadtime")
-                                .font(Font.custom("Rubik-Regular", size: 12))
-                                .foregroundColor(Color.linkableColor())
-                        }.frame(width: 90)
-                        VStack {
-                            Image("praful")
-                                .resizable()
-                                .frame(width: 75, height: 75)
-                                .cornerRadius(5)
-                            Text("prafdhar")
-                                .font(Font.custom("Rubik-Regular", size: 12))
-                                .foregroundColor(Color.linkableColor())
-                        }.frame(width: 90)
-                        VStack {
-                            Image("reia")
-                                .resizable()
-                                .frame(width: 75, height: 75)
-                                .cornerRadius(5)
-                            Text("rcho99")
-                                .font(Font.custom("Rubik-Regular", size: 12))
-                                .foregroundColor(Color.linkableColor())
-                        }.frame(width: 90)
-                        VStack {
-                            Image("invite")
-                                .resizable()
-                                .frame(width: 75, height: 75)
-                                .foregroundColor(Color.linkableColor())
-                            Text("Invite")
-                                .font(Font.custom("Rubik-Regular", size: 12))
-                                .foregroundColor(Color.linkableColor())
-                        }.frame(width: 90)
-                    }
-                }
+                WorkoutFriendElement()
             }
             .padding()
             
