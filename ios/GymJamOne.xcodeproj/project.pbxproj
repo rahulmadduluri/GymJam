@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AF5701BB2342A6F400542D55 /* hiit_example_sample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AF5701BA2342A6F400542D55 /* hiit_example_sample.mp4 */; };
 		AF967E062348635D0002E1CB /* WorkoutFriendElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF967E052348635D0002E1CB /* WorkoutFriendElement.swift */; };
+		AF967E08234992F10002E1CB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF967E07234992F10002E1CB /* ProfileView.swift */; };
 		AFAB86D72342C4FA00FA8B6C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB86D62342C4FA00FA8B6C /* ColorExtension.swift */; };
 		AFAB86DD2342C71600FA8B6C /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFAB86D82342C70E00FA8B6C /* Rubik-Black.ttf */; };
 		AFAB86DE2342C71600FA8B6C /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFAB86D92342C70E00FA8B6C /* Rubik-Bold.ttf */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		AF5701BA2342A6F400542D55 /* hiit_example_sample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hiit_example_sample.mp4; sourceTree = "<group>"; };
 		AF967E052348635D0002E1CB /* WorkoutFriendElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutFriendElement.swift; sourceTree = "<group>"; };
+		AF967E07234992F10002E1CB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AFAB86D62342C4FA00FA8B6C /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		AFAB86D82342C70E00FA8B6C /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
 		AFAB86D92342C70E00FA8B6C /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				AFEB64E32336BEE3008B32AA /* AppDelegate.swift */,
 				AFEB64E52336BEE3008B32AA /* SceneDelegate.swift */,
 				AFEB64E72336BEE3008B32AA /* ContentView.swift */,
+				AF967E07234992F10002E1CB /* ProfileView.swift */,
 				AFAB86F1234590CD00FA8B6C /* Workout */,
 				AFAB86D62342C4FA00FA8B6C /* ColorExtension.swift */,
 				AFEB64E92336BEE4008B32AA /* Assets.xcassets */,
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFAB86F32346D12E00FA8B6C /* WorkoutView.swift in Sources */,
+				AF967E08234992F10002E1CB /* ProfileView.swift in Sources */,
 				AFAB86EA2344290100FA8B6C /* WorkoutCameraView.swift in Sources */,
 				AFEB64E42336BEE3008B32AA /* AppDelegate.swift in Sources */,
 				AFAB86E4234418F600FA8B6C /* WorkoutPlayer.swift in Sources */,
