@@ -16,7 +16,7 @@ struct WorkoutFriendUIElement: Hashable, Codable {
 
 struct WorkoutFriendElement: View {
     
-    let workoutFriendElements = [WorkoutFriendUIElement(imageName: "hammad", userName: "hammadtime"), WorkoutFriendUIElement(imageName: "praful", userName: "praful"), WorkoutFriendUIElement(imageName: "reia", userName: "rcho99"), WorkoutFriendUIElement(imageName: "invite", userName: " ")]
+    let workoutFriendElements = [WorkoutFriendUIElement(imageName: "hammad", userName: "hammadtime"), WorkoutFriendUIElement(imageName: "praful", userName: "praful"), WorkoutFriendUIElement(imageName: "reia", userName: "rcho99"), WorkoutFriendUIElement(imageName: "invite", userName: "Invite")]
     
     var body: some View {
         VStack(alignment: .leading) {
