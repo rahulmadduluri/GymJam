@@ -31,4 +31,8 @@ extension Color {
     public static func linkableColor() -> Color {
         return Color(hex: 0x2F80ED)
     }
+    
+    public static func darkColor() -> Color {
+        return Color(hex: 0x121212)
+    }
 }

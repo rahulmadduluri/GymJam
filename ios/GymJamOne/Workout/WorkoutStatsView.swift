@@ -13,6 +13,7 @@ struct WorkoutStatsView: View {
         VStack(alignment: .leading, spacing: 30) {
             Text("Blistering Twisters")
                 .font(Font.custom("Rubik-Medium", size: 24))
+                .foregroundColor(Color.white)
             HStack(alignment: .center, spacing: 40) {
                 VStack {
                     HStack(spacing: -5) {
@@ -26,6 +27,7 @@ struct WorkoutStatsView: View {
                     Text("Friend")
                         .frame(minWidth: 50, maxWidth: 50)
                         .font(Font.custom("Rubik-Regular", size: 16))
+                        .foregroundColor(Color.white)
                 }
                 VStack {
                     Image("reps")
@@ -34,6 +36,7 @@ struct WorkoutStatsView: View {
                     Text("Reps")
                         .frame(minWidth: 50, maxWidth: 50)
                         .font(Font.custom("Rubik-Regular", size: 16))
+                        .foregroundColor(Color.white)
                 }
             }
         }.frame(minWidth: 300, maxWidth: 300, minHeight: 0, maxHeight: .infinity, alignment: .top).padding()

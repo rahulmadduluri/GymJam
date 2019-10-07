@@ -27,12 +27,17 @@ struct WorkoutView: View {
                     VStack(alignment: .leading, spacing: 10) {
                         Text("Blistering Twisters")
                             .font(Font.custom("Rubik-Medium", size: 16))
+                            .foregroundColor(Color.white)
                         Text("Squats, Twists, Jumping Jacks")
                             .font(Font.custom("Rubik-Regular", size: 14))
+                            .foregroundColor(Color.white)
                         Text("30 minutes")
                             .font(Font.custom("Rubik-Regular", size: 14))
+                            .foregroundColor(Color.white)
                         Text("148 calories")
                             .font(Font.custom("Rubik-Regular", size: 14))
+                            .foregroundColor(Color.white)
+
                     }.padding()
                 }
                 WorkoutFriendElement()
@@ -63,7 +68,6 @@ struct WorkoutView: View {
                 }
             })
         }
-
     }
 }
 

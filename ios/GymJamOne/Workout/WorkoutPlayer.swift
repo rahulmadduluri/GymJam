@@ -17,15 +17,18 @@ struct WorkoutPlayer: View {
         let instructorVideoPath = Bundle.main.path(forResource: "hiit_example_sample", ofType:"mp4")!
         player = AVPlayer(url: URL(fileURLWithPath: instructorVideoPath))
     }
-        
+            
     var body: some View {
-        HStack {
-            WorkoutInstructorView(player: player)
-                .onDisappear() {
-                    self.player.pause()
-                }
-            PhotoCaptureView()
-            WorkoutStatsView()
+        ZStack {
+            Color.darkColor().edgesIgnoringSafeArea(.all)
+            HStack {
+                WorkoutInstructorView(player: player)
+                    .onDisappear() {
+                        self.player.pause()
+                    }
+                PhotoCaptureView()
+                WorkoutStatsView()
+            }
         }
     }
 }
