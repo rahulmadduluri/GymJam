@@ -26,5 +26,5 @@ type Query {
 
 type Mutation {
   createUser(userInfo: CreateUserInput!): Boolean! #@isAuthenticated
-  updateStudent(userInfo: UpdateUserInput!): Boolean! #@isAuthenticated
+  updateUser(userInfo: UpdateUserInput!): Boolean! #@isAuthenticated
 }

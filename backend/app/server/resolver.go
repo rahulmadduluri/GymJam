@@ -1,11 +1,10 @@
-package app
+package server
 
 import (
 	"context"
 	"fmt"
 
 	auth "github.com/rahulmadduluri/GymJam/backend/app/auth"
-	models "github.com/rahulmadduluri/GymJam/backend/app/models"
 
 	"github.com/99designs/gqlgen/graphql"
 )
@@ -50,15 +49,4 @@ func New() Config {
 		Resolvers:  &resolver,
 		Directives: directive,
 	}
-}
-
-func (r *mutationResolver) CreateUser(ctx context.Context, userInfo models.CreateUserInput) (bool, error) {
-	panic("not implemented")
-}
-func (r *mutationResolver) UpdateStudent(ctx context.Context, userInfo models.UpdateUserInput) (bool, error) {
-	panic("not implemented")
-}
-
-func (r *queryResolver) User(ctx context.Context, uuid string) (*models.User, error) {
-	panic("not implemented")
 }
