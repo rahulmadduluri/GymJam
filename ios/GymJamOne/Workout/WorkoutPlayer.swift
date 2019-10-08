@@ -28,7 +28,19 @@ struct WorkoutPlayer: View {
                     }
                 PhotoCaptureView()
                 WorkoutStatsView()
-            }
+            }.overlay(
+                Button(action: {
+                    
+                }) {
+                    Text("Quit")
+                        .padding()
+                        .background(Color.red)
+                        .foregroundColor(Color.white)
+                        .font(Font.custom("Rubik-Medium", size: 14))
+                        .cornerRadius(10)
+                }
+                
+            )
         }
     }
 }

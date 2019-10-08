@@ -13,37 +13,30 @@ struct WorkoutView: View {
     @State var isModal: Bool = false
         
     var body: some View {
-        VStack(spacing: 50) {
-            VStack(alignment: .leading, spacing: 50) {
-                Text("Tuesday's Jam")
-                    .font(Font.custom("Rubik-Bold", size: 40))
-                    .foregroundColor(Color.primaryColor())
-                HStack(alignment: .top) {
+        VStack(spacing: 15) {
+            Text("Tuesday")
+                .font(Font.custom("Rubik-Bold", size: 32))
+                .foregroundColor(Color.primaryColor())
+            VStack {
+                ZStack(alignment: .bottom) {
                     Image(uiImage: UIImage(named: "workout_sample_pic")!)
                         .resizable()
-                        .frame(width: 125, height: 200)
+                        .frame(width: 200, height: 320)
                         .cornerRadius(10)
                         .shadow(radius: 5)
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text("Blistering Twisters")
-                            .font(Font.custom("Rubik-Medium", size: 16))
-                            .foregroundColor(Color.white)
-                        Text("Squats, Twists, Jumping Jacks")
-                            .font(Font.custom("Rubik-Regular", size: 14))
-                            .foregroundColor(Color.white)
-                        Text("30 minutes")
-                            .font(Font.custom("Rubik-Regular", size: 14))
-                            .foregroundColor(Color.white)
-                        Text("148 calories")
-                            .font(Font.custom("Rubik-Regular", size: 14))
-                            .foregroundColor(Color.white)
-
-                    }.padding()
+                    Text("Blistering Twisters")
+                        .font(Font.custom("Rubik-Medium", size: 18))
+                        .foregroundColor(Color.white)
+                        .offset(x: 0, y: -40)
+                    Text("30 min - 128 calories")
+                        .font(Font.custom("Rubik-Medium", size: 14))
+                        .foregroundColor(Color.white)
+                        .padding()
                 }
-                WorkoutFriendElement()
             }
-            .padding()
-            
+            WorkoutFriendElement()
+                .padding()
+                .frame(height: 180)
             Button(action: {
                 self.isModal = true
             }) {

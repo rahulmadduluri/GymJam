@@ -16,27 +16,27 @@ struct WorkoutFriendUIElement: Hashable, Codable {
 
 struct WorkoutFriendElement: View {
     
-    let workoutFriendElements = [WorkoutFriendUIElement(imageName: "hammad", userName: "hammadtime"), WorkoutFriendUIElement(imageName: "praful", userName: "praful"), WorkoutFriendUIElement(imageName: "reia", userName: "rcho99"), WorkoutFriendUIElement(imageName: "invite", userName: "Invite")]
+    let workoutFriendElements = [WorkoutFriendUIElement(imageName: "hammad", userName: "hammadtime"), WorkoutFriendUIElement(imageName: "praful", userName: "praful"), WorkoutFriendUIElement(imageName: "reia", userName: "rcho99")]
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Who's Doing This Workout")
-                .font(Font.custom("Rubik-Medium", size: 16))
-            Spacer()
-            Spacer()
-            HStack {
-                ForEach(workoutFriendElements, id: \.self) { wfe in
-                    VStack {
-                        Image("\(wfe.imageName)")
-                            .resizable()
-                            .frame(width: 75, height: 75)
-                            .cornerRadius(5)
-                        Text("\(wfe.userName)")
-                            .font(Font.custom("Rubik-Regular", size: 14))
-                            .foregroundColor(Color.linkableColor())
-                    }.frame(width: 90)
+        VStack() {
+            Text("Today's Jam Fam")
+                .font(Font.custom("Rubik-Medium", size: 20))
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
+            ScrollView(.vertical, showsIndicators: false, content: {
+                HStack() {
+                    ForEach(workoutFriendElements, id: \.self) { wfe in
+                        VStack {
+                            Image("\(wfe.imageName)")
+                                .resizable()
+                                .frame(width: 75, height: 75)
+                                .cornerRadius(37.5)
+                            Text("@"+"\(wfe.userName)")
+                                .font(Font.custom("Rubik-Medium", size: 14))
+                        }.frame(minWidth: 0, maxWidth: .infinity)
+                    }
                 }
-            }
+            })
         }
     }
 }

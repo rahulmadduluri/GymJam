@@ -10,7 +10,7 @@ import SwiftUI
 
 struct WorkoutStatsView: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 30) {
+        VStack(alignment: .leading, spacing: 24) {
             Text("Blistering Twisters")
                 .font(Font.custom("Rubik-Medium", size: 24))
                 .foregroundColor(Color.white)
@@ -39,7 +39,7 @@ struct WorkoutStatsView: View {
                         .foregroundColor(Color.white)
                 }
             }
-        }.frame(minWidth: 300, maxWidth: 300, minHeight: 0, maxHeight: .infinity, alignment: .top).padding()
+        }.frame(minWidth: 200, maxWidth: 200, minHeight: 0, maxHeight: .infinity, alignment: .top).padding()
     }
 }
 
