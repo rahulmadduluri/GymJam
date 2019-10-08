@@ -23,7 +23,7 @@ struct ContentView: View {
             Text("Second View")
                 .tabItem {
                     Image("friends_icon")
-                    Text("Buddies")
+                    Text("Fam")
                 }.tag(1)
             ProfileView()
                 .tabItem {

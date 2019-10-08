@@ -11,6 +11,9 @@ import AVKit
 
 struct WorkoutPlayer: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State private var showingQuitActionSheet = false
+    
     let player: AVPlayer
     
     init() {
@@ -23,25 +26,29 @@ struct WorkoutPlayer: View {
             Color.darkColor().edgesIgnoringSafeArea(.all)
             HStack {
                 WorkoutInstructorView(player: player)
-                    .onDisappear() {
-                        self.player.pause()
-                    }
                 PhotoCaptureView()
                 WorkoutStatsView()
-            }.overlay(
-                Button(action: {
-                    
-                }) {
-                    Text("Quit")
-                        .padding()
-                        .background(Color.red)
-                        .foregroundColor(Color.white)
-                        .font(Font.custom("Rubik-Medium", size: 14))
-                        .cornerRadius(10)
-                }
-                
-            )
+            }
         }
+            .gesture(
+                DragGesture(minimumDistance: 50)
+                    .onEnded { (_) in
+                        self.showingQuitActionSheet = true
+                    }
+            )
+            .actionSheet(isPresented: $showingQuitActionSheet) {
+                ActionSheet(
+                    title: Text("Quit Workout?"),
+                    buttons: [
+                        .cancel { self.showingQuitActionSheet = false },
+                        .destructive(Text("Quit")) {
+                            self.player.pause()
+                            AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
+                    ]
+                )
+            }
     }
 }
 

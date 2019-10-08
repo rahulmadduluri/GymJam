@@ -56,9 +56,6 @@ struct WorkoutView: View {
                 WorkoutPlayer().onAppear() {
                     AppUtility.lockOrientation(.landscapeRight, andRotateTo: .landscapeRight)
                 }
-                .onDisappear() {
-                    AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
-                }
             })
         }
     }
