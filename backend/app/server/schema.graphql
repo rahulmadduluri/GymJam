@@ -20,11 +20,38 @@ input UpdateUserInput {
   email: String
 }
 
+type Workout {
+  uuid: ID!
+  name: String
+  durationSec: Int!
+}
+
+type WorkoutPerformance {
+  uuid: ID!
+  user: User!
+  workout: Workout!
+  repTimestampsSec: [Int]!
+  completed: Boolean
+}
+
+type GroupWorkout {
+  uuid: ID!
+  workout: Workout!
+  workoutPerformances: [WorkoutPerformance!]!
+}
+
 type Query {
   user(uuid: ID!): User #@isAuthenticated
+
 }
 
 type Mutation {
   createUser(userInfo: CreateUserInput!): Boolean! #@isAuthenticated
   updateUser(userInfo: UpdateUserInput!): Boolean! #@isAuthenticated
+  startWorkout(workoutUUID: ID!): Boolean!
+  endWorkout: Boolean!
+}
+
+type Subscription {
+  GroupWorkoutUpdates(groupWorkoutUUID: ID!): GroupWorkout!
 }

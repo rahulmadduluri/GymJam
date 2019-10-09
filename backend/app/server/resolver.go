@@ -12,12 +12,16 @@ import (
 type Resolver struct{}
 type queryResolver struct{ *Resolver }
 type mutationResolver struct{ *Resolver }
+type subscriptionResolver struct{ *Resolver }
 
 func (r *Resolver) Query() QueryResolver {
 	return &queryResolver{r}
 }
 func (r *Resolver) Mutation() MutationResolver {
 	return &mutationResolver{r}
+}
+func (r *Resolver) Subscription() SubscriptionResolver {
+	return &subscriptionResolver{r}
 }
 
 func New() Config {
