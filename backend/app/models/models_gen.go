@@ -9,6 +9,11 @@ type CreateUserInput struct {
 	Email     string `json:"email"`
 }
 
+type Friendship struct {
+	FriendA *User `json:"friendA"`
+	FriendB *User `json:"friendB"`
+}
+
 type GroupWorkout struct {
 	UUID                string                `json:"uuid"`
 	Workout             *Workout              `json:"workout"`
@@ -23,22 +28,24 @@ type UpdateUserInput struct {
 }
 
 type User struct {
-	UUID      string  `json:"uuid"`
-	FirstName string  `json:"firstName"`
-	LastName  string  `json:"lastName"`
-	PhotoURI  *string `json:"photoURI"`
+	UUID      string        `json:"uuid"`
+	FirstName string        `json:"firstName"`
+	LastName  string        `json:"lastName"`
+	PhotoURI  *string       `json:"photoURI"`
+	Friends   []*Friendship `json:"friends"`
 }
 
 type Workout struct {
-	UUID        string  `json:"uuid"`
-	Name        *string `json:"name"`
-	DurationSec int     `json:"durationSec"`
+	UUID              string  `json:"uuid"`
+	Name              *string `json:"name"`
+	DurationInSeconds int     `json:"durationInSeconds"`
+	PhotoURI          string  `json:"photoURI"`
 }
 
 type WorkoutPerformance struct {
-	UUID             string   `json:"uuid"`
-	User             *User    `json:"user"`
-	Workout          *Workout `json:"workout"`
-	RepTimestampsSec []*int   `json:"repTimestampsSec"`
-	Completed        *bool    `json:"completed"`
+	UUID                   string   `json:"uuid"`
+	User                   *User    `json:"user"`
+	Workout                *Workout `json:"workout"`
+	RepTimestampsInSeconds []*int   `json:"repTimestampsInSeconds"`
+	Completed              *bool    `json:"completed"`
 }

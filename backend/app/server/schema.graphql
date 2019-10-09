@@ -5,6 +5,12 @@ type User {
   firstName: String!
   lastName: String!
   photoURI: String
+  friends: [Friendship!]
+}
+
+type Friendship {
+  friendA: User!
+  friendB: User!
 }
 
 input CreateUserInput {
@@ -23,14 +29,15 @@ input UpdateUserInput {
 type Workout {
   uuid: ID!
   name: String
-  durationSec: Int!
+  durationInSeconds: Int!
+  photoURI: String!
 }
 
 type WorkoutPerformance {
   uuid: ID!
   user: User!
   workout: Workout!
-  repTimestampsSec: [Int]!
+  repTimestampsInSeconds: [Int]!
   completed: Boolean
 }
 
@@ -42,16 +49,18 @@ type GroupWorkout {
 
 type Query {
   user(uuid: ID!): User #@isAuthenticated
-
+  users: [User!]!
 }
 
 type Mutation {
   createUser(userInfo: CreateUserInput!): Boolean! #@isAuthenticated
   updateUser(userInfo: UpdateUserInput!): Boolean! #@isAuthenticated
+  addFriend(friendUUID: String!): Boolean!
+
   startWorkout(workoutUUID: ID!): Boolean!
   endWorkout: Boolean!
 }
 
 type Subscription {
-  GroupWorkoutUpdates(groupWorkoutUUID: ID!): GroupWorkout!
+  groupWorkoutUpdates(groupWorkoutUUID: ID!): GroupWorkout!
 }
