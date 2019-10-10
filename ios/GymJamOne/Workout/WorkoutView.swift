@@ -14,10 +14,7 @@ struct WorkoutView: View {
         
     var body: some View {
         VStack(spacing: 15) {
-            Text("Tuesday")
-                .font(Font.custom("Rubik-Bold", size: 32))
-                .foregroundColor(Color.primaryColor())
-            VStack {
+            HStack {
                 ZStack(alignment: .bottom) {
                     Image(uiImage: UIImage(named: "workout_sample_pic")!)
                         .resizable()
@@ -33,7 +30,14 @@ struct WorkoutView: View {
                         .foregroundColor(Color.white)
                         .padding()
                 }
-            }
+                Text("Squats")
+                    .frame(width: 140, height: 50)
+                    .font(Font.custom("Rubik-Medium", size: 18))
+                    .background(Color.black)
+                    .foregroundColor(Color.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 5)
+            }.padding()
             WorkoutFriendElement()
                 .padding()
                 .frame(height: 180)

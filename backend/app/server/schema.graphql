@@ -1,5 +1,6 @@
 directive @isAuthenticated on FIELD_DEFINITION | QUERY
 
+# User
 type User {
   uuid: ID!
   firstName: String!
@@ -7,12 +8,10 @@ type User {
   photoURI: String
   friends: [Friendship!]
 }
-
 type Friendship {
   friendA: User!
   friendB: User!
 }
-
 input CreateUserInput {
   uuid: ID!
   firstName: String!
@@ -26,19 +25,30 @@ input UpdateUserInput {
   email: String
 }
 
+# Workout
 type Workout {
   uuid: ID!
-  name: String
-  durationInSeconds: Int!
+  name: String!
   photoURI: String!
+  exercises: [Exercise!]!
+}
+type Exercise {
+  uuid: ID!
+  name: String!
+  durationInSeconds: Int!
+}
+type ExercisePerformance {
+  uuid: ID!
+  user: User!
+  exercise: Exercise!
+  repTimestampsInSeconds: [Int]!
 }
 
 type WorkoutPerformance {
   uuid: ID!
   user: User!
   workout: Workout!
-  repTimestampsInSeconds: [Int]!
-  completed: Boolean
+  exercisePerformances: [ExercisePerformance!]!
 }
 
 type GroupWorkout {

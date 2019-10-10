@@ -12,6 +12,7 @@ use gymjam;
 
 To populate MySQL:
 source {path to GymJam}/GymJam/backend/db-util/create_db.sql
+source {path to GymJam}/GymJam/backend/db-util/seed_db_dev.sql
 
 To Run Server: 
 go run app/main/main.go

@@ -9,6 +9,19 @@ type CreateUserInput struct {
 	Email     string `json:"email"`
 }
 
+type Exercise struct {
+	UUID              string `json:"uuid"`
+	Name              string `json:"name"`
+	DurationInSeconds int    `json:"durationInSeconds"`
+}
+
+type ExercisePerformance struct {
+	UUID                   string    `json:"uuid"`
+	User                   *User     `json:"user"`
+	Exercise               *Exercise `json:"exercise"`
+	RepTimestampsInSeconds []*int    `json:"repTimestampsInSeconds"`
+}
+
 type Friendship struct {
 	FriendA *User `json:"friendA"`
 	FriendB *User `json:"friendB"`
@@ -36,16 +49,15 @@ type User struct {
 }
 
 type Workout struct {
-	UUID              string  `json:"uuid"`
-	Name              *string `json:"name"`
-	DurationInSeconds int     `json:"durationInSeconds"`
-	PhotoURI          string  `json:"photoURI"`
+	UUID      string      `json:"uuid"`
+	Name      string      `json:"name"`
+	PhotoURI  string      `json:"photoURI"`
+	Exercises []*Exercise `json:"exercises"`
 }
 
 type WorkoutPerformance struct {
-	UUID                   string   `json:"uuid"`
-	User                   *User    `json:"user"`
-	Workout                *Workout `json:"workout"`
-	RepTimestampsInSeconds []*int   `json:"repTimestampsInSeconds"`
-	Completed              *bool    `json:"completed"`
+	UUID                 string                 `json:"uuid"`
+	User                 *User                  `json:"user"`
+	Workout              *Workout               `json:"workout"`
+	ExercisePerformances []*ExercisePerformance `json:"exercisePerformances"`
 }

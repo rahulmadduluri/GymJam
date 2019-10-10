@@ -20,7 +20,7 @@ struct WorkoutFriendElement: View {
     
     var body: some View {
         VStack() {
-            Text("Today's Jam Fam")
+            Text("Workout JamFam")
                 .font(Font.custom("Rubik-Medium", size: 20))
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
             ScrollView(.vertical, showsIndicators: false, content: {

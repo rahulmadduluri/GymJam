@@ -25,7 +25,6 @@ CREATE TABLE IF NOT EXISTS workouts (
 	id 							int 			NOT NULL AUTO_INCREMENT,
 	uuid						varchar(36)		NOT NULL,
 	name 						varchar(200)	NOT NULL,
-	duration_in_seconds 		int,
 	photo_uri 					varchar(200)	NOT NULL,
 	created_timestamp_server	int				NOT NULL,
 	UNIQUE KEY (uuid),
@@ -42,6 +41,18 @@ CREATE TABLE IF NOT EXISTS workout_performances (
 	PRIMARY KEY (id),
 	FOREIGN KEY (user_id) REFERENCES users (id),
 	FOREIGN KEY (workout_id) REFERENCES workouts (id)
+);
+CREATE TABLE IF NOT EXISTS workout_performance_stats (
+	id 							int 			NOT NULL AUTO_INCREMENT,
+	uuid						varchar(36)		NOT NULL,
+	workout_performance_id		int				NOT NULL,
+	metric_type 				varchar(200)	NOT NULL,   # metric name. e.g. "reps"
+	metric_timestamp			int 			NOT NULL,	# how many seconds in was the metric taken
+	metric_value 				int 			NOT NULL,	# what is the value of the metric
+	created_timestamp_server	int				NOT NULL,
+	UNIQUE KEY (uuid),
+	PRIMARY KEY (id),
+	FOREIGN KEY (workout_performance_id) REFERENCES workout_performances (id)
 );
 
 CREATE TABLE IF NOT EXISTS group_workouts (
