@@ -19,21 +19,26 @@ struct WorkoutFriendElement: View {
     let workoutFriendElements = [WorkoutFriendUIElement(imageName: "hammad", userName: "hammadtime"), WorkoutFriendUIElement(imageName: "praful", userName: "praful"), WorkoutFriendUIElement(imageName: "reia", userName: "rcho99")]
     
     var body: some View {
-        VStack() {
-            Text("Workout JamFam")
-                .font(Font.custom("Rubik-Medium", size: 20))
+        VStack {
+            Text("Jam Fam")
+                .font(Font.custom("Rubik-Medium", size: 16))
+                .foregroundColor(Color.white)
+                .shadow(radius: 20)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
             ScrollView(.vertical, showsIndicators: false, content: {
-                HStack() {
+                VStack() {
                     ForEach(workoutFriendElements, id: \.self) { wfe in
                         VStack {
                             Image("\(wfe.imageName)")
                                 .resizable()
-                                .frame(width: 75, height: 75)
+                                .frame(width: 50, height: 50)
                                 .cornerRadius(37.5)
+                                .shadow(radius: 20)
                             Text("@"+"\(wfe.userName)")
                                 .font(Font.custom("Rubik-Medium", size: 14))
-                        }.frame(minWidth: 0, maxWidth: .infinity)
+                                .foregroundColor(Color.white)
+                                .shadow(radius: 20)
+                        }.frame(minWidth: 0, maxWidth: 125)
                     }
                 }
             })
@@ -43,6 +48,6 @@ struct WorkoutFriendElement: View {
 
 struct WorkoutFriendElement_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutFriendElement()
+        WorkoutFriendElement().background(Color.black)
     }
 }

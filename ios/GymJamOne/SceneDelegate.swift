@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = DarkHostingController(rootView: contentView)
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -61,3 +61,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+class DarkHostingController<Content> : UIHostingController<Content> where Content : View {
+    @objc override dynamic open var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+}

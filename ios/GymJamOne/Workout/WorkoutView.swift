@@ -13,34 +13,28 @@ struct WorkoutView: View {
     @State var isModal: Bool = false
         
     var body: some View {
-        VStack(spacing: 15) {
-            HStack {
-                ZStack(alignment: .bottom) {
-                    Image(uiImage: UIImage(named: "workout_sample_pic")!)
-                        .resizable()
-                        .frame(width: 200, height: 320)
-                        .cornerRadius(10)
-                        .shadow(radius: 5)
-                    Text("Blistering Twisters")
-                        .font(Font.custom("Rubik-Medium", size: 18))
-                        .foregroundColor(Color.white)
-                        .offset(x: 0, y: -40)
-                    Text("30 min - 128 calories")
-                        .font(Font.custom("Rubik-Medium", size: 14))
-                        .foregroundColor(Color.white)
-                        .padding()
-                }
-                Text("Squats")
-                    .frame(width: 140, height: 50)
-                    .font(Font.custom("Rubik-Medium", size: 18))
-                    .background(Color.black)
+        ZStack {
+            Image(uiImage: UIImage(named: "workout_sample_pic")!)
+                .resizable()
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                .edgesIgnoringSafeArea(.top)
+
+            VStack {
+                Text("Boxing Bonanza")
+                    .font(Font.custom("Rubik-Medium", size: 20))
                     .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    .shadow(radius: 5)
-            }.padding()
+                Text("30 min")
+                    .font(Font.custom("Rubik-Medium", size: 14))
+                    .foregroundColor(Color.white)
+                    .offset(x: 0, y: 5)
+            }
+            .frame(maxHeight: .infinity, alignment: .top)
+            
+            
             WorkoutFriendElement()
-                .padding()
-                .frame(height: 180)
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .offset(x: 0, y: 100)
+
             Button(action: {
                 self.isModal = true
             }) {
@@ -48,10 +42,10 @@ struct WorkoutView: View {
                     Image("flex_arm")
                         .resizable()
                         .renderingMode(.original)
-                        .frame(width: 35, height: 35, alignment: .center)
-                    Text("Get Fit")
+                        .frame(width: 30, height: 30, alignment: .center)
+                    Text("Work Out")
                         .foregroundColor(Color.white)
-                        .font(Font.custom("Rubik-Medium", size: 30))
+                        .font(Font.custom("Rubik-Medium", size: 24))
                 }
                 .padding()
                 .background(Color.primaryColor())
@@ -61,6 +55,9 @@ struct WorkoutView: View {
                     AppUtility.lockOrientation(.landscapeRight, andRotateTo: .landscapeRight)
                 }
             })
+                .shadow(radius: 20)
+                .frame(maxHeight: .infinity, alignment: .bottom)
+                .offset(x: 0, y: -50)
         }
     }
 }

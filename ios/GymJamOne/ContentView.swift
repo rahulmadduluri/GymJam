@@ -12,6 +12,10 @@ struct ContentView: View {
     
     @State var selectedView = 0
     
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.darkGray
+    }
+    
     var body: some View {
         TabView(selection: $selectedView) {
             WorkoutView()
@@ -30,7 +34,8 @@ struct ContentView: View {
                     Image("profile_icon")
                     Text("Me")
                 }.tag(2)
-        }.accentColor(Color.primaryColor())
+        }.accentColor(Color.primaryColor()).edgesIgnoringSafeArea(.top)
+
     }
 }
 
