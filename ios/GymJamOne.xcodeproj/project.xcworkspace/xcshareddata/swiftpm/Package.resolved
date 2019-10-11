@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "VideoPlayer",
+        "repositoryURL": "git@github.com:wxxsw/VideoPlayer.git",
+        "state": {
+          "branch": "master",
+          "revision": "6cada3ac368bbb2de700010aff8fed2f19a80111",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

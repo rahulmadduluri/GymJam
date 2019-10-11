@@ -7,17 +7,33 @@
 //
 
 import SwiftUI
+import VideoPlayer
 
 struct WorkoutView: View {
     
     @State var isModal: Bool = false
+    
+    let backgroundVideoURL: URL
+    @State var isPlay: Bool = true
+    @State var isAutoReplay: Bool = true
+    @State var isMute: Bool = true
+    
+    init() {
+        let videoPath = Bundle.main.path(forResource: "trimmed_boxing", ofType:"mp4")!
+        backgroundVideoURL = URL(fileURLWithPath: videoPath)
+    }
         
     var body: some View {
         ZStack {
-            Image(uiImage: UIImage(named: "workout_sample_pic")!)
-                .resizable()
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                .edgesIgnoringSafeArea(.top)
+            VideoPlayerView(url: .constant(backgroundVideoURL), isPlay: $isPlay)
+                .autoReplay($isAutoReplay)
+                .mute($isMute)
+                .frame(minWidth: 425, alignment: .top)
+                .edgesIgnoringSafeArea(.all)
+//            Image(uiImage: UIImage(named: "workout_sample_pic")!)
+//                .resizable()
+//                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+//                .edgesIgnoringSafeArea(.top)
 
             VStack {
                 Text("Boxing Bonanza")
@@ -34,6 +50,7 @@ struct WorkoutView: View {
             WorkoutFriendElement()
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .offset(x: 0, y: 100)
+                .padding()
 
             Button(action: {
                 self.isModal = true
