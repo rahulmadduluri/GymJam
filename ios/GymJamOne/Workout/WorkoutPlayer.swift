@@ -25,7 +25,7 @@ struct WorkoutPlayer: View {
         ZStack {
             Color.darkColor().edgesIgnoringSafeArea(.all)
             HStack {
-                WorkoutInstructorView(player: player)
+//                WorkoutInstructorView(player: player)
                 PhotoCaptureView()
                 WorkoutStatsView()
             }

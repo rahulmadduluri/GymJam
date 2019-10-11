@@ -13,7 +13,7 @@ struct ContentView: View {
     @State var selectedView = 0
     
     init() {
-        UITabBar.appearance().backgroundColor = UIColor.darkGray
+        UITabBar.appearance().backgroundColor = UIColor.black
     }
     
     var body: some View {
@@ -34,7 +34,10 @@ struct ContentView: View {
                     Image("profile_icon")
                     Text("Me")
                 }.tag(2)
-        }.accentColor(Color.primaryColor()).edgesIgnoringSafeArea(.top)
+        }
+            .accentColor(Color.primaryColor())
+            .edgesIgnoringSafeArea(.top)
+            .environment(\.colorScheme, .dark)
 
     }
 }

@@ -11,8 +11,8 @@ import SwiftUI
 struct WorkoutStatsView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
-            Text("Blistering Twisters")
-                .font(Font.custom("Rubik-Medium", size: 24))
+            Text("Boxing Bonanza")
+                .font(Font.custom("Rubik-Medium", size: 20))
                 .foregroundColor(Color.white)
             HStack(alignment: .center, spacing: 40) {
                 VStack {
@@ -26,7 +26,7 @@ struct WorkoutStatsView: View {
                     }
                     Text("Friend")
                         .frame(minWidth: 50, maxWidth: 50)
-                        .font(Font.custom("Rubik-Regular", size: 16))
+                        .font(Font.custom("Rubik-Regular", size: 12))
                         .foregroundColor(Color.white)
                 }
                 VStack {
@@ -35,7 +35,7 @@ struct WorkoutStatsView: View {
                         .frame(width: 35, height: 35)
                     Text("Reps")
                         .frame(minWidth: 50, maxWidth: 50)
-                        .font(Font.custom("Rubik-Regular", size: 16))
+                        .font(Font.custom("Rubik-Regular", size: 12))
                         .foregroundColor(Color.white)
                 }
             }
