@@ -16,7 +16,7 @@ struct WorkoutPlayer: View {
     
     let player: AVPlayer
     
-    init() {
+    init() {        
         let instructorVideoPath = Bundle.main.path(forResource: "hiit_example_sample", ofType:"mp4")!
         player = AVPlayer(url: URL(fileURLWithPath: instructorVideoPath))
     }
@@ -26,7 +26,7 @@ struct WorkoutPlayer: View {
             Color.darkColor().edgesIgnoringSafeArea(.all)
             HStack {
 //                WorkoutInstructorView(player: player)
-                PhotoCaptureView()
+                WorkoutCameraViewAR()//.rotationEffect(Angle.degrees(90))
                 WorkoutStatsView()
             }
         }
@@ -43,6 +43,7 @@ struct WorkoutPlayer: View {
                         .cancel { self.showingQuitActionSheet = false },
                         .destructive(Text("Quit")) {
                             self.player.pause()
+                            UIApplication.shared.isIdleTimerDisabled = false
                             AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
                             self.presentationMode.wrappedValue.dismiss()
                         }

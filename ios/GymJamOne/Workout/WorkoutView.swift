@@ -70,6 +70,7 @@ struct WorkoutView: View {
             }.sheet(isPresented: $isModal, content: {
                 WorkoutPlayer().onAppear() {
                     AppUtility.lockOrientation(.landscapeRight, andRotateTo: .landscapeRight)
+                    UIApplication.shared.isIdleTimerDisabled = true
                 }
             })
                 .shadow(radius: 20)
