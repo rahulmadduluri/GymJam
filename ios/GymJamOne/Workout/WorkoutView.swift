@@ -28,19 +28,15 @@ struct WorkoutView: View {
             VideoPlayerView(url: .constant(backgroundVideoURL), isPlay: $isPlay)
                 .autoReplay($isAutoReplay)
                 .mute($isMute)
-                .frame(minWidth: 425, alignment: .top)
-                .edgesIgnoringSafeArea(.all)
-//            Image(uiImage: UIImage(named: "workout_sample_pic")!)
-//                .resizable()
-//                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-//                .edgesIgnoringSafeArea(.top)
+                .edgesIgnoringSafeArea(.top)
+                .frame(maxWidth: .infinity, alignment: .top)
 
             VStack {
                 Text("Boxing Bonanza")
-                    .font(Font.custom("Rubik-Medium", size: 20))
+                    .font(Font.custom("Rubik-Medium", size: 24))
                     .foregroundColor(Color.white)
                 Text("30 min")
-                    .font(Font.custom("Rubik-Medium", size: 14))
+                    .font(Font.custom("Rubik-Medium", size: 16))
                     .foregroundColor(Color.white)
                     .offset(x: 0, y: 5)
             }
@@ -49,8 +45,7 @@ struct WorkoutView: View {
             
             WorkoutFriendElement()
                 .frame(maxWidth: .infinity, alignment: .trailing)
-                .offset(x: 0, y: 100)
-                .padding()
+                .offset(x: 0, y: 150)
 
             Button(action: {
                 self.isModal = true

@@ -40,6 +40,13 @@ struct WorkoutFriendElement: View {
                                 .shadow(radius: 20)
                         }.frame(minWidth: 0, maxWidth: 125)
                     }
+                    VStack {
+                        Image("invite")
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                            .cornerRadius(37.5)
+                            .shadow(radius: 20)
+                    }.frame(minWidth: 0, maxWidth: 125)
                 }
             })
         }

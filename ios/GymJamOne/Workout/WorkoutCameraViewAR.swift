@@ -30,6 +30,15 @@ struct RealityIntegratedViewController: UIViewControllerRepresentable {
 }
 
 class RealityViewController: UIViewController {
+    
+//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+//        return .portrait
+//    }
+//    
+//    override open var shouldAutorotate: Bool {
+//        return false
+//    }
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         // Add a background color a placerholder
@@ -44,4 +53,5 @@ class RealityViewController: UIViewController {
         // Add the box anchor to the scene
         arView.scene.anchors.append(boxAnchor)
     }
+    
 }

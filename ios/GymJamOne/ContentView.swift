@@ -11,11 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State var selectedView = 0
-    
-    init() {
-        UITabBar.appearance().backgroundColor = UIColor.black
-    }
-    
+        
     var body: some View {
         TabView(selection: $selectedView) {
             WorkoutView()
@@ -26,8 +22,8 @@ struct ContentView: View {
                 .tag(0)
             Text("Second View")
                 .tabItem {
-                    Image("friends_icon")
-                    Text("Fam")
+                    Image("calendar_icon")
+                    Text("Calendar")
                 }.tag(1)
             ProfileView()
                 .tabItem {
@@ -35,9 +31,9 @@ struct ContentView: View {
                     Text("Me")
                 }.tag(2)
         }
-            .accentColor(Color.primaryColor())
-            .edgesIgnoringSafeArea(.top)
             .environment(\.colorScheme, .dark)
+            .accentColor(Color.white)
+            .edgesIgnoringSafeArea(.top)
 
     }
 }

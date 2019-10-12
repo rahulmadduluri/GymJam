@@ -39,7 +39,7 @@ struct WorkoutStatsView: View {
                         .foregroundColor(Color.white)
                 }
             }
-        }.frame(minWidth: 200, maxWidth: 200, minHeight: 0, maxHeight: .infinity, alignment: .top).padding()
+        }.frame(minWidth: 200, maxWidth: 400, minHeight: 0, maxHeight: .infinity, alignment: .top).padding()
     }
 }
 
