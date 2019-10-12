@@ -19,7 +19,7 @@ struct WorkoutPlayer: View {
             Color.darkColor().edgesIgnoringSafeArea(.all)
             HStack {
 //                WorkoutInstructorView(player: player)
-                WorkoutCameraViewAR()//.rotationEffect(Angle.degrees(90))
+                WorkoutCameraViewAR().rotationEffect(Angle.degrees(90))
                 WorkoutStatsView()
             }
         }

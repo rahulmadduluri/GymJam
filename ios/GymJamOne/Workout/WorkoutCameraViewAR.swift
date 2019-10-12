@@ -34,7 +34,7 @@ class RealityViewController: UIViewController {
 //    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
 //        return .portrait
 //    }
-//    
+//
 //    override open var shouldAutorotate: Bool {
 //        return false
 //    }
@@ -42,10 +42,9 @@ class RealityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Add a background color a placerholder
-        view.backgroundColor = .systemBlue
         //Comment out below this when previewing!
         // Create a new ARView
-        let arView = ARView(frame: UIScreen.main.bounds)
+        let arView = ARView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width/UIScreen.main.bounds.height * UIScreen.main.bounds.width))
         // Add the ARView to the view
         view.addSubview(arView)
         // Load the "Box" scene from the "Experience" Reality File
