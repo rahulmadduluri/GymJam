@@ -8,6 +8,7 @@
 
 import SwiftUI
 import RealityKit
+import ARKit
 
 struct WorkoutCameraViewAR: View {
     var body: some View {
@@ -48,9 +49,23 @@ class RealityViewController: UIViewController {
         // Add the ARView to the view
         view.addSubview(arView)
         // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
+//        let boxAnchor = try! Experience.loadBox()
         // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
+//        arView.scene.anchors.append(boxAnchor)
+        
+        if ARBodyTrackingConfiguration.isSupported {
+            let configuration = ARBodyTrackingConfiguration()
+            arView.session.run(configuration)
+        }
+        let bodyAnchor = AnchorEntity(.body)
+        arView.scene.anchors.append(bodyAnchor)
+        
+        Entity.loadBodyTrackedAsync(named: "robot").sink(receiveCompletion: { (error) in
+            //error
+        }) { (character) in
+            bodyAnchor.addChild(character)
+        }
+        
     }
     
 }
