@@ -11,6 +11,7 @@
 		AF52424923500EC100F89B64 /* trimmed_boxing.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AF52424823500EC100F89B64 /* trimmed_boxing.mp4 */; };
 		AF52426B23501BF200F89B64 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = AF52426A23501BF200F89B64 /* Experience.rcproject */; };
 		AF52426D23501C4600F89B64 /* WorkoutCameraViewAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF52426C23501C4600F89B64 /* WorkoutCameraViewAR.swift */; };
+		AF52426F2355903800F89B64 /* character in Resources */ = {isa = PBXBuildFile; fileRef = AF52426E2355903700F89B64 /* character */; };
 		AF5701BB2342A6F400542D55 /* hiit_example_sample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AF5701BA2342A6F400542D55 /* hiit_example_sample.mp4 */; };
 		AF967E062348635D0002E1CB /* WorkoutFriendElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF967E052348635D0002E1CB /* WorkoutFriendElement.swift */; };
 		AF967E08234992F10002E1CB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF967E07234992F10002E1CB /* ProfileView.swift */; };
@@ -36,6 +37,7 @@
 		AF52424823500EC100F89B64 /* trimmed_boxing.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = trimmed_boxing.mp4; sourceTree = "<group>"; };
 		AF52426A23501BF200F89B64 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		AF52426C23501C4600F89B64 /* WorkoutCameraViewAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCameraViewAR.swift; sourceTree = "<group>"; };
+		AF52426E2355903700F89B64 /* character */ = {isa = PBXFileReference; lastKnownFileType = folder; path = character; sourceTree = "<group>"; };
 		AF5701BA2342A6F400542D55 /* hiit_example_sample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hiit_example_sample.mp4; sourceTree = "<group>"; };
 		AF967E052348635D0002E1CB /* WorkoutFriendElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutFriendElement.swift; sourceTree = "<group>"; };
 		AF967E07234992F10002E1CB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		AFEB64E22336BEE3008B32AA /* GymJamOne */ = {
 			isa = PBXGroup;
 			children = (
+				AF52426E2355903700F89B64 /* character */,
 				AF52426A23501BF200F89B64 /* Experience.rcproject */,
 				AF52424823500EC100F89B64 /* trimmed_boxing.mp4 */,
 				AF5701BA2342A6F400542D55 /* hiit_example_sample.mp4 */,
@@ -207,6 +210,7 @@
 			files = (
 				AFAB86DD2342C71600FA8B6C /* Rubik-Black.ttf in Resources */,
 				AF5701BB2342A6F400542D55 /* hiit_example_sample.mp4 in Resources */,
+				AF52426F2355903800F89B64 /* character in Resources */,
 				AFAB86E12342C71600FA8B6C /* Rubik-Regular.ttf in Resources */,
 				AFEB64F02336BEE4008B32AA /* LaunchScreen.storyboard in Resources */,
 				AFAB86DE2342C71600FA8B6C /* Rubik-Bold.ttf in Resources */,
