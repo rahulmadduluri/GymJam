@@ -32,20 +32,16 @@ struct RealityIntegratedViewController: UIViewControllerRepresentable {
 }
 
 class RealityViewController: UIViewController, ARSessionDelegate {
-    
-//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-//        return .portrait
-//    }
-//
-//    override open var shouldAutorotate: Bool {
-//        return false
-//    }
-    
+        
     // The 3D character to display.
     var character: BodyTrackedEntity?
-    let characterOffset: SIMD3<Float> = [0, 0, 0] // Offset the character by one meter to the left
-    let characterAnchor = AnchorEntity()
-            
+    let characterAnchor = AnchorEntity(.body)
+    var bodyAnchor: ARBodyAnchor?
+    
+    var label: UILabel?
+    
+    var testlol = 0
+                
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,14 +57,10 @@ class RealityViewController: UIViewController, ARSessionDelegate {
 
         // Add the ARView to the view
         view.addSubview(arView)
-        // Load the "Box" scene from the "Experience" Reality File
-//        let boxAnchor = try! Experience.loadBox()
-        // Add the box anchor to the scene
-//        arView.scene.anchors.append(boxAnchor)
         
         let configuration = ARBodyTrackingConfiguration()
         arView.session.run(configuration)
-//        let bodyAnchor = AnchorEntity(.body)
+
         arView.scene.anchors.append(characterAnchor)
         
         // Asynchronously load the 3D character.
@@ -89,20 +81,32 @@ class RealityViewController: UIViewController, ARSessionDelegate {
                 print("Error: Unable to load model as BodyTrackedEntity")
             }
         })
+        
+        // add text
+        let testLabel = UILabel(frame: CGRect(x: 10, y: 10, width: 300, height: 150))
+        testLabel.font = UIFont(name: "Arial", size: 8)
+        testLabel.numberOfLines = 0
+        label = testLabel
+        view.addSubview(testLabel)
+        
 
     }
     
      func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
          for anchor in anchors {
-             guard let bodyAnchor = anchor as? ARBodyAnchor else { continue }
-             
+            guard let bAnchor = anchor as? ARBodyAnchor else { continue }
+            
+            bodyAnchor = bAnchor
+            let xDesc = bAnchor.skeleton.jointLocalTransforms.debugDescription
+            label?.text = xDesc
+            
              // Update the position of the character anchor's position.
-             let bodyPosition = simd_make_float3(bodyAnchor.transform.columns.3)
-             characterAnchor.position = bodyPosition + characterOffset
+//             let bodyPosition = simd_make_float3(bodyAnchor.transform.columns.3)
+//             characterAnchor.position = bodyPosition
              // Also copy over the rotation of the body anchor, because the skeleton's pose
              // in the world is relative to the body anchor's rotation.
-             characterAnchor.orientation = Transform(matrix: bodyAnchor.transform).rotation
-    
+//             characterAnchor.orientation = Transform(matrix: bodyAnchor.transform).rotation
+                
              if let character = character, character.parent == nil {
                  // Attach the character to its anchor as soon as
                  // 1. the body anchor was detected and
